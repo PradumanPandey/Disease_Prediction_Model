@@ -8,16 +8,13 @@ from streamlit_option_menu import option_menu
 
 diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
 
-heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
-
 
 # sidebar for navigation
 with st.sidebar:
     
     selected = option_menu('Multiple Disease Prediction System',
                           
-                          ['Diabetes Prediction',
-                           'Heart Disease Prediction'],
+                          ['Diabetes Prediction'],
                           icons=['activity','heart','person'],
                           default_index=0)
     
